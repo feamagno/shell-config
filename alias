@@ -1,0 +1,47 @@
+alias ls='ls --color=auto'
+alias grep='rg --color=auto'
+alias v='nvim'
+alias vim='nvim'
+# Time and compile all Java files into bin/ and run the main class
+crjvt() {
+    MAIN_CLASS=$1   # pass fully qualified main class as argument, e.g., com.example.app.Main
+
+    # Create bin folder if it doesn't exist
+    mkdir -p bin
+
+    # Compile all .java files under src/
+    javac -d bin $(find src -name "*.java")
+    if [ $? -ne 0 ]; then
+        echo "Compilation failed!"
+        return 1
+    fi
+
+    # Run the main class
+    time java -cp bin "$MAIN_CLASS"
+}
+
+# Compile all Java files into bin/ and run the main class
+crjv() {
+    MAIN_CLASS=$1   # pass fully qualified main class as argument, e.g., com.example.app.Main
+
+    # Create bin folder if it doesn't exist
+    mkdir -p bin
+
+    # Compile all .java files under src/
+    javac -d bin $(find src -name "*.java")
+    if [ $? -ne 0 ]; then
+        echo "Compilation failed!"
+        return 1
+    fi
+
+    # Run the main class
+    java -cp bin "$MAIN_CLASS"
+}
+
+# run the main class
+rjv() {
+    MAIN_CLASS=$1   # pass fully qualified main class as argument, e.g., com.example.app.Main
+
+    # Run the main class
+    java -cp bin "$MAIN_CLASS"
+}
