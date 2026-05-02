@@ -1,7 +1,10 @@
 alias ls='ls --color=auto'
 alias grep='rg --color=auto'
 alias v='nvim'
-alias vim='nvim'
+
+alias awsp="source _awsp"
+alias ghp="GH_CONFIG_DIR=~/.config/gh-personal gh"
+
 # Time and compile all Java files into bin/ and run the main class
 crjvt() {
     MAIN_CLASS=$1   # pass fully qualified main class as argument, e.g., com.example.app.Main
