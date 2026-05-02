@@ -1,5 +1,6 @@
 alias ls='ls --color=auto'
-alias grep='rg --color=auto'
+alias grep='grep --color=auto'
+alias rg='rg --color=auto'
 alias v='nvim'
 
 alias awsp="source _awsp"
