@@ -1,3 +1,4 @@
+# eu amo muito a soso lindona gatinha
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias rg='rg --color=auto'
