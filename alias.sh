@@ -1,4 +1,4 @@
-# eu amo muito a soso lindona gatinha
+# eu amo muito a soso lindona gatinha lindona
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias rg='rg --color=auto'
